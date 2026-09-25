@@ -1,3 +1,14 @@
+const books = [
+{
+id: “beyond-fear”,
+title: “Beyond Fear: Discovering Strength and Responsibility”,
+author: “Atem Akol Agoth”,
+category: “Personal Development”,
+description:
+“A journey about overcoming fear, rejection, responsibility, faith, and discovering the strength within you.”,
+cover: “BEYOND FEAR”,
+chapters: [
+{
 title=“ZaVi Library — Updated script.js with Chapter 1”}
 const books = [
 {
