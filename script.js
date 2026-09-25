@@ -1,158 +1,334 @@
 const books = [
-  {
-    id:"beyond-fear",
-    title:"Beyond Fear: Discovering Strength and Responsibility",
-    author:"Atem Akol Agoth",
-    category:"Personal Growth",
-    description:"A journey through fear, rejection, responsibility, faith, and the strength to keep moving forward.",
-    chapters:[
-      "Fear can make a person believe that the road ahead is impossible. But courage does not mean the absence of fear. It means choosing to move even when fear is present. Every difficult season can teach us something about ourselves.",
-      "Responsibility begins when we stop waiting for someone else to change our lives. We may not control every circumstance, but we can control the next decision. Small decisions repeated with discipline can become a completely different future."
-    ]
-  },
-  {
-    id:"true-poverty",
-    title:"The True Poverty",
-    author:"Atem Akol Agoth",
-    category:"Mindset",
-    description:"A reflection on poverty beyond money, focusing on mindset, purpose, faith, and the way people understand their own possibilities.",
-    chapters:[
-      "Many people define poverty only by the lack of money or material things. Those realities matter, but poverty can also affect the way a person thinks about possibility, responsibility, purpose, and hope.",
-      "Acceptance does not mean giving up. It means seeing reality clearly enough to decide what can be changed. Once we stop denying where we are, we can begin building a path toward where we want to go."
-    ]
-  },
-  {
-    id:"positive-mindset",
-    title:"Positive Mindset",
-    author:"Atem Akol Agoth & Achuil Mabek",
-    category:"Self Development",
-    description:"Practical conversations about discipline, money, choices, growth, and building a healthier mindset.",
-    chapters:[
-      "A positive mindset is not pretending that everything is easy. It is learning to look at difficulty without allowing difficulty to define your entire future.",
-      "The way we handle small things often prepares us for bigger responsibilities. Discipline with time, money, relationships, and learning creates habits that can carry us into the future."
-    ]
-  },
-  {
-    id:"body-mind-spirit",
-    title:"Body, Mind, and Spirit",
-    author:"Atem Akol Agoth & Achuil Mabek",
-    category:"Spiritual Growth",
-    description:"A spiritual exploration of the connection between the body, mind, character, purpose, and faith.",
-    chapters:[
-      "A person is more than what can be seen from the outside. The body needs care, the mind needs wisdom, and the spirit needs purpose. Growth becomes stronger when these areas are not treated as separate worlds.",
-      "Faith can become a source of direction when life feels uncertain. Asking, learning, reflecting, and taking action can help us move from confusion toward a clearer sense of purpose."
-    ]
-  }
+{
+id: “beyond-fear”,
+title: “Beyond Fear: Discovering Strength and Responsibility”,
+author: “Atem Akol Agoth”,
+category: “Personal Development”,
+description:
+“A journey about overcoming fear, rejection, responsibility, faith, and discovering the strength within you.”,
+cover: “BEYOND FEAR”,
+chapters: [
+{
+title: “Chapter 1 — Beyond Fear”,
+text: `Fear can make us question ourselves, our future, and even our purpose. But fear does not have to control the direction of our lives.
+
+Sometimes the greatest strength is not the absence of fear. It is the decision to keep moving forward even when fear is present.
+
+Every person faces moments when they feel rejected, forgotten, or uncertain. Those moments can either become walls that stop us or lessons that help us grow.
+
+Your story is not finished because you are facing a difficult chapter. Keep going. There may be strength inside you that you have not discovered yet.}, { title: "Chapter 2 — Responsibility", text:Responsibility begins when we understand that our choices matter.
+
+We cannot control everything that happens around us, but we can learn to control how we respond. Our decisions today can influence the person we become tomorrow.
+
+Growing in responsibility means becoming willing to learn, correct our mistakes, and keep moving forward.
+
+Strength is not only about surviving difficult situations. It is also about becoming someone who can be trusted with greater opportunities.`
+}
+]
+}
 ];
 
-const $ = s => document.querySelector(s);
-const favorites = JSON.parse(localStorage.getItem("zaviFavorites") || "[]");
 let selectedBook = null;
 let currentChapter = 0;
 
-function saveFavorites(){ localStorage.setItem("zaviFavorites", JSON.stringify(favorites)); updateStats(); renderBooks(); }
-function isFav(id){ return favorites.includes(id); }
+const $ = (selector) => document.querySelector(selector);
 
-function updateStats(){
-  $("#bookCount").textContent = books.length;
-  $("#categoryCount").textContent = new Set(books.map(b=>b.category)).size;
-  $("#favoriteCount").textContent = favorites.length;
+const bookGrid = $(”#bookGrid”);
+const searchInput = $(”#searchInput”);
+const categoryFilter = $(”#categoryFilter”);
+const emptyState = $(”#emptyState”);
+
+const bookModal = $(”#bookModal”);
+const closeModal = $(”#closeModal”);
+const modalCover = $(”#modalCover”);
+const modalCategory = $(”#modalCategory”);
+const modalTitle = $(”#modalTitle”);
+const modalAuthor = $(”#modalAuthor”);
+const modalDescription = $(”#modalDescription”);
+const readBtn = $(”#readBtn”);
+const favBtn = $(”#favBtn”);
+
+const readerModal = $(”#readerModal”);
+const closeReader = $(”#closeReader”);
+const readerTitle = $(”#readerTitle”);
+const readerText = $(”#readerText”);
+const chapterLabel = $(”#chapterLabel”);
+const progressBar = $(”#progressBar”);
+const prevChapter = $(”#prevChapter”);
+const nextChapter = $(”#nextChapter”);
+
+const themeBtn = $(”#themeBtn”);
+const continueBtn = $(”#continueBtn”);
+
+function getFavorites() {
+return JSON.parse(localStorage.getItem(“zaviFavorites”) || “[]”);
 }
 
-function setupCategories(){
-  const cats = [...new Set(books.map(b=>b.category))].sort();
-  $("#categoryFilter").innerHTML = '<option value="all">All categories</option>' + cats.map(c=>`<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
+function saveFavorites(favorites) {
+localStorage.setItem(“zaviFavorites”, JSON.stringify(favorites));
 }
 
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
-
-function renderBooks(){
-  const q = $("#searchInput").value.toLowerCase().trim();
-  const cat = $("#categoryFilter").value;
-  const list = books.filter(b => (cat==="all" || b.category===cat) && `${b.title} ${b.author}`.toLowerCase().includes(q));
-  $("#bookGrid").innerHTML = list.map(b=>`
-    <article class="book-card">
-      <div class="mini-cover">${escapeHtml(b.title)}</div>
-      <div class="card-meta">
-        <p class="eyebrow">${escapeHtml(b.category)}</p>
-        <div class="card-row">
-          <h3>${escapeHtml(b.title)}</h3>
-          <button class="heart" data-fav="${b.id}" aria-label="Favorite">${isFav(b.id)?"♥":"♡"}</button>
-        </div>
-        <p class="muted">${escapeHtml(b.author)}</p>
-        <button class="btn primary" data-open="${b.id}">View Book</button>
-      </div>
-    </article>`).join("");
-  $("#emptyState").classList.toggle("hidden", list.length!==0);
+function isFavorite(bookId) {
+return getFavorites().includes(bookId);
 }
 
-function openBook(id){
-  selectedBook = books.find(b=>b.id===id);
-  if(!selectedBook)return;
-  $("#modalCategory").textContent = selectedBook.category;
-  $("#modalTitle").textContent = selectedBook.title;
-  $("#modalAuthor").textContent = `By ${selectedBook.author}`;
-  $("#modalDescription").textContent = selectedBook.description;
-  $("#modalCover").innerHTML = `<span>ZaVi</span><b>${escapeHtml(selectedBook.title)}</b>`;
-  $("#favBtn").textContent = isFav(id) ? "♥ Favorited" : "♡ Favorite";
-  $("#bookModal").classList.remove("hidden");
-}
-function closeBook(){ $("#bookModal").classList.add("hidden"); }
+function updateStats() {
+$(”#bookCount”).textContent = books.length;
 
-function toggleFavorite(){
-  if(!selectedBook)return;
-  const i=favorites.indexOf(selectedBook.id);
-  i>=0?favorites.splice(i,1):favorites.push(selectedBook.id);
-  $("#favBtn").textContent = isFav(selectedBook.id) ? "♥ Favorited" : "♡ Favorite";
-  saveFavorites();
+const categories = new Set(books.map(book => book.category));
+$(”#categoryCount”).textContent = categories.size;
+
+$(”#favoriteCount”).textContent = getFavorites().length;
 }
 
-function openReader(book, chapter=0){
-  selectedBook=book; currentChapter=chapter;
-  $("#readerTitle").textContent=book.title;
-  renderChapter();
-  $("#readerModal").classList.remove("hidden");
-  localStorage.setItem("zaviLastBook", book.id);
-}
-function renderChapter(){
-  const total=selectedBook.chapters.length;
-  $("#chapterLabel").textContent=`Chapter ${currentChapter+1} of ${total}`;
-  $("#readerText").textContent=selectedBook.chapters[currentChapter];
-  $("#progressBar").style.width=`${((currentChapter+1)/total)*100}%`;
-  $("#prevChapter").disabled=currentChapter===0;
-  $("#nextChapter").textContent=currentChapter===total-1?"Finish":"Next →";
-}
-function closeReader(){ $("#readerModal").classList.add("hidden"); }
+function setupCategories() {
+const categories = […new Set(books.map(book => book.category))];
 
-document.addEventListener("click", e=>{
-  const open=e.target.closest("[data-open]"), fav=e.target.closest("[data-fav]");
-  if(open)openBook(open.dataset.open);
-  if(fav){
-    const b=books.find(x=>x.id===fav.dataset.fav); if(!b)return;
-    const i=favorites.indexOf(b.id); i>=0?favorites.splice(i,1):favorites.push(b.id);
-    saveFavorites();
-  }
+categories.forEach(category => {
+const option = document.createElement(“option”);
+option.value = category;
+option.textContent = category;
+categoryFilter.appendChild(option);
 });
-$("#closeModal").onclick=closeBook;
-$("#favBtn").onclick=toggleFavorite;
-$("#readBtn").onclick=()=>{closeBook();openReader(selectedBook,0)};
-$("#closeReader").onclick=closeReader;
-$("#nextChapter").onclick=()=>{if(currentChapter<selectedBook.chapters.length-1){currentChapter++;renderChapter();}};
-$("#prevChapter").onclick=()=>{if(currentChapter>0){currentChapter--;renderChapter();}};
-$("#searchInput").oninput=renderBooks;
-$("#categoryFilter").onchange=renderBooks;
+}
 
-$("#continueBtn").onclick=()=>{
-  const last=localStorage.getItem("zaviLastBook");
-  const book=books.find(b=>b.id===last)||books[0];
-  openReader(book,0);
+function createBookCard(book) {
+const article = document.createElement(“article”);
+article.className = “book-card”;
+
+article.innerHTML = `
+
+ZaVi
+${book.cover}
+${book.author}
+
+
+<div class="book-info">
+  <p class="eyebrow">${book.category}</p>
+  <h3>${book.title}</h3>
+  <p class="muted">By ${book.author}</p>
+
+  <div class="card-actions">
+    <button class="btn primary details-btn">Book Details</button>
+    <button class="favorite-btn" aria-label="Favorite">
+      ${isFavorite(book.id) ? "♥" : "♡"}
+    </button>
+  </div>
+</div>
+
+`;
+
+article.querySelector(”.details-btn”).onclick = () => openBook(book);
+article.querySelector(”.favorite-btn”).onclick = () => toggleFavorite(book.id);
+
+return article;
+}
+
+function renderBooks() {
+const search = searchInput.value.toLowerCase().trim();
+const category = categoryFilter.value;
+
+const filteredBooks = books.filter(book => {
+const matchesSearch =
+book.title.toLowerCase().includes(search) ||
+book.author.toLowerCase().includes(search) ||
+book.category.toLowerCase().includes(search);
+
+const matchesCategory =
+  category === "all" || book.category === category;
+
+return matchesSearch && matchesCategory;
+
+});
+
+bookGrid.innerHTML = “”;
+
+filteredBooks.forEach(book => {
+bookGrid.appendChild(createBookCard(book));
+});
+
+emptyState.classList.toggle(“hidden”, filteredBooks.length !== 0);
+}
+
+function openBook(book) {
+selectedBook = book;
+
+modalCover.innerHTML = <span>ZaVi</span> <b>${book.cover}</b> <small>${book.author}</small>;
+
+modalCategory.textContent = book.category;
+modalTitle.textContent = book.title;
+modalAuthor.textContent = By ${book.author};
+modalDescription.textContent = book.description;
+
+updateFavoriteButton();
+
+bookModal.classList.remove(“hidden”);
+}
+
+function updateFavoriteButton() {
+if (!selectedBook) return;
+
+favBtn.textContent = isFavorite(selectedBook.id)
+? “♥ Remove Favorite”
+: “♡ Favorite”;
+}
+
+function toggleFavorite(bookId) {
+let favorites = getFavorites();
+
+if (favorites.includes(bookId)) {
+favorites = favorites.filter(id => id !== bookId);
+} else {
+favorites.push(bookId);
+}
+
+saveFavorites(favorites);
+
+updateStats();
+renderBooks();
+updateFavoriteButton();
+}
+
+function startReading(book) {
+selectedBook = book;
+
+const savedChapter = Number(
+localStorage.getItem(zavi-progress-${book.id}) || 0
+);
+
+currentChapter = Math.min(savedChapter, book.chapters.length - 1);
+
+readerModal.classList.remove(“hidden”);
+
+renderChapter();
+}
+
+function renderChapter() {
+if (!selectedBook) return;
+
+const chapter = selectedBook.chapters[currentChapter];
+
+readerTitle.textContent = selectedBook.title;
+chapterLabel.textContent =
+Chapter ${currentChapter + 1} of ${selectedBook.chapters.length};
+
+readerText.innerHTML = chapter.text
+.split(”\n\n”)
+.map(paragraph => <p>${paragraph}</p>)
+.join(””);
+
+const progress =
+((currentChapter + 1) / selectedBook.chapters.length) * 100;
+
+progressBar.style.width = ${progress}%;
+
+prevChapter.disabled = currentChapter === 0;
+nextChapter.disabled =
+currentChapter === selectedBook.chapters.length - 1;
+
+localStorage.setItem(
+zavi-progress-${selectedBook.id},
+currentChapter
+);
+}
+
+readBtn.onclick = () => {
+if (!selectedBook) return;
+
+bookModal.classList.add(“hidden”);
+startReading(selectedBook);
 };
 
-$("#themeBtn").onclick=()=>{
-  document.documentElement.classList.toggle("dark");
-  localStorage.setItem("zaviDark",document.documentElement.classList.contains("dark"));
-};
-if(localStorage.getItem("zaviDark")==="true")document.documentElement.classList.add("dark");
+favBtn.onclick = () => {
+if (!selectedBook) return;
 
-$("#year").textContent=new Date().getFullYear();
-setupCategories(); updateStats(); renderBooks();
+toggleFavorite(selectedBook.id);
+};
+
+prevChapter.onclick = () => {
+if (currentChapter > 0) {
+currentChapter–;
+renderChapter();
+}
+};
+
+nextChapter.onclick = () => {
+if (
+selectedBook &&
+currentChapter < selectedBook.chapters.length - 1
+) {
+currentChapter++;
+renderChapter();
+}
+};
+
+closeModal.onclick = () => {
+bookModal.classList.add(“hidden”);
+};
+
+closeReader.onclick = () => {
+readerModal.classList.add(“hidden”);
+};
+
+bookModal.onclick = event => {
+if (event.target === bookModal) {
+bookModal.classList.add(“hidden”);
+}
+};
+
+readerModal.onclick = event => {
+if (event.target === readerModal) {
+readerModal.classList.add(“hidden”);
+}
+};
+
+searchInput.addEventListener(“input”, renderBooks);
+categoryFilter.addEventListener(“change”, renderBooks);
+
+continueBtn.onclick = () => {
+const lastBookId = localStorage.getItem(“zaviLastBook”);
+
+if (lastBookId) {
+const book = books.find(item => item.id === lastBookId);
+
+if (book) {
+  startReading(book);
+  return;
+}
+
+}
+
+document.querySelector(”#library”).scrollIntoView({
+behavior: “smooth”
+});
+};
+
+themeBtn.onclick = () => {
+document.body.classList.toggle(“dark”);
+
+const darkMode = document.body.classList.contains(“dark”);
+
+localStorage.setItem(“zaviDarkMode”, darkMode ? “on” : “off”);
+
+themeBtn.textContent = darkMode ? “☀” : “☾”;
+};
+
+function loadTheme() {
+const darkMode = localStorage.getItem(“zaviDarkMode”) === “on”;
+
+if (darkMode) {
+document.body.classList.add(“dark”);
+themeBtn.textContent = “☀”;
+}
+}
+
+function initialize() {
+setupCategories();
+renderBooks();
+updateStats();
+loadTheme();
+
+$(”#year”).textContent = new Date().getFullYear();
+}
+
+initialize();
