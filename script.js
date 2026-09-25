@@ -279,10 +279,233 @@ chapters: [
 
 <p>Ask yourself daily, <strong>“Why am I giving away my power by blaming others?”</strong></p>
 `
+      },
+
+     {
+        title: "Chapter 2 — Decide What’s Important",
+        text: `
+          <h2>DECIDE WHAT’S IMPORTANT</h2>
+
+          <p>You are the one who should decide what’s important and right for yourself and for the transformation of your future. To start is not hard, you just need some practical steps:</p>
+
+          <h3>1. Manage Your Time</h3>
+
+          <p>Start by managing your time because your time is a precious treasure; once it is gone, it will not repeat itself for you. E.g., in the 21st century, a lot of people spend hours on social media or on activities which are not important to them at all. And then later they complain that they do not have enough time to study, or they do not work properly on their goals, or on improving themselves.</p>
+
+          <p>But let me tell you this, managing your time isn’t about isolation, but it’s about choosing what truly deserves your attention. If you waste your time on meaningless things, you will eventually face a lifetime of regret.</p>
+
+          <h3>2. Invest Your Time in Growth</h3>
+
+          <p>Invest your time in things that can change you and develop you. To shift the course of your life, you must categorise your time towards essential and beneficial goals. E.g., investing your time in reading, learning new skills and improving your mindset may help you build meaningful relationships and shape your future.</p>
+
+          <h3>3. Time Is Wealth</h3>
+
+          <p>Your time is your true wealth. Now, look around you. Do you see anyone who wishes for their wealth to decrease? Of course not, everyone strives to increase it, right? This is why successful people feel that time is never enough for them; they race against it as if in a marathon towards victory.</p>
+
+          <p>Remember this: never compare money with time, because money might be lost and earned again, but when time is lost, it’s gone forever. So, treat your time as your greatest investment.</p>
+
+          <h3>The Foundations of Priorities</h3>
+
+          <p>Everything has its time, but the greatest portion should be dedicated to God and yourself because that’s where life starts. Spending time with God is very important because he is the source of life, wisdom, and strength.</p>
+
+          <p>The Bible reminds us that “To everything there’s a season, and a time for every purpose under heaven.” <strong>Ecclesiastes 3:1</strong></p>
+
+          <p>The Bible teaches us that life is built on stages. There is a time to grow, a time to wait and a time to succeed. So, if you want to reach what you aspire to achieve and complete, then you need God to guide you and protect you in every season. When you give God your time, he helps you understand the right season and leads you forward with peace.</p>
+
+          <p><strong>Ask yourself these questions:</strong></p>
+
+          <ul>
+            <li>Which stage am I in right now?</li>
+            <li>Am I in a stage of self-transformation or not?</li>
+          </ul>
+
+          <p>Deciding what is truly important does not happen by chance; it requires a firm decision and a commitment with no turning back. There are certain principles that you must lay down before making any decision.</p>
+
+          <ul>
+            <li><strong>Focus on the essentials:</strong> Focusing on the essential things gives you energy to focus on the things that matter to you, which may lead to the results that change your life.</li>
+
+            <li><strong>Focus on priorities:</strong> Keep your eyes fixed solely on the results you want for yourself, and do not allow anything to distract you, so that you won’t change your direction.</li>
+
+            <li><strong>Master your time:</strong> Time is the greatest treasure a person could ever have, but mastering it is the best thing you can ever do. In the end, you will either blame yourself for how you wasted it or be proud of yourself because of how you used it.</li>
+          </ul>
+
+          <h3>Take Control</h3>
+
+          <p>Persevere for yourself, and your adventures will be a means to reach what you want. Why do you regret the time you wasted, when you are the only person who has the ability to control it to attract the things that benefit you?</p>
+
+          <p>In this life, you are the driver of your life; you are responsible for anything or everything that may happen in your life. Drive the “car” (yourself) as you wish, but make sure you reach your destination safely.</p>
+
+          <p>Take full control of your life and gain your time to gain everything else. Make the most of your time, for what is most important is to gain a lot.</p>
+
+          <p><strong>Remember:</strong> No one will be with you during your struggles, or when you’re taking risks, or during suffocation. True friends will be there in every situation, but others will only show up for the celebration once you’ve succeeded.</p>
+
+          <p>Life is strange; therefore, you may give your time to others if you wish, but never give them more time than you give your own priorities, except for the “family.” Eliminate anything that stands against your goals, your priorities and your success, so that you don’t stay stuck and regret for the rest of your life.</p>
+
+          <h3>Build Your Legacy</h3>
+
+          <p>Your ability to endure and overcome difficulties is the result of your effort and your time. We become experts by focusing on what matters and repeating the process until we find solutions.</p>
+
+          <p>Scientists and philosophers did not reach their status by coincidence; they became icons because they gave themselves enough time to find answers and conduct experiments.</p>
+
+          <p>You draw your history with your time. You can create a legacy that people will remember long after you are gone. With your time, you prove to the world who you are and leave behind an eternal symbol.</p>
+
+          <p>Your name will be mentioned from generation to generation because you left behind a treasure, your dream and a clear vision that you realised.</p>
+
+          <p><strong>The opportunity of a lifetime comes only once.</strong></p>
+
+          <p>Keep your life balanced, with your time and your dream. Give yourself enough time to grow your ambitions, goals, and successes in life.</p>
+
+          <p>Be exceptional with yourself and your time, and use your time wisely, because blaming others for your wasted time won’t help you in the future.</p>
+
+          <p>If you can’t control your own time, who else will do it for you? Blaming others for not controlling your own time is the biggest mistake. What is their fault then, for what could have been your responsibility?</p>
+
+          <p>Deal with your difficult problems and challenges by dedicating time to extracting the right solutions. Be a sniper: Target your goals, whether they are distant or small, with a sharp focus. Be a sniper when it comes to your objectives and your success in life.</p>
+
+          <h3>Design Your Life</h3>
+
+          <p>Your life won’t get better by accident; it will get better because of who you’re becoming. You can’t become what you want if you don’t accept where you’re at.</p>
+
+          <p>Note this: if you want your life to get better, it won’t just get better, but it will get better by design. And a design starts with a choice, a choice to decide what matters most.</p>
+
+          <p>Every day you have a chance to make a choice about where you will invest your time, your energy and your love. Those choices might seem like they are not important when viewed in isolation, but when they are combined, they will write the script of your life.</p>
+
+          <p>If you don’t know what you value, you will say yes to everything and everyone. And in the process, you will risk everything, leaving little room for what really counts.</p>
+
+          <p>This is why the greatest gift you can give yourself is clarity. Clarity of values, clarity of priorities and clarity of purpose.</p>
+
+          <p>Because without clarity, life will be a motion without meaning, and it will be a time which is being filled but not used.</p>
+
+          <p>People become busy 24/7 for 365 days because they need to be productive. But if our schedules and lives are full and not fulfilling, then what’s the point of living a busy life?</p>
+
+          <p>Think of values as your compass, because they’re going to guide you when life gets hard. When distractions multiply in your life, it’s value that draws you back to the track.</p>
+
+          <p>When opportunities that don’t align with your purpose appear, your values redirect you. So, without values, you wander aimlessly, but with values, you walk with direction.</p>
+
+          <p><strong>Ask yourself:</strong></p>
+
+          <ul>
+            <li>What do I stand for?</li>
+            <li>What matters most to me?</li>
+          </ul>
+
+          <p>These questions might sound simple, but take your time to answer them honestly. Many people build lives based on other people’s expectations—chasing careers, possessions or recognition—only to discover later that they feel empty inside.</p>
+
+          <p>By asking yourself these questions, you will help yourself reflect on your true self and identify what you truly want or need.</p>
+
+          <p>Imagine climbing a ladder your whole life, only to realise that it was leaning against the wrong wall. It’s bad, right? That’s what happens when you don’t build your life on values.</p>
+
+          <p>But when you build your life on values, you create alignment between your heart and your actions. Your life will gain depth when you build it on values, not just decoration.</p>
+
+          <p>If you want to know your true priorities, don’t just listen to your words; look at your calendar. Your time reveals what matters to you more clearly than your promises.</p>
+
+          <p><strong>For example:</strong></p>
+
+          <ul>
+            <li>If you say family is important but spend all your evenings buried in work emails, then your actions don’t match your words.</li>
+            <li>If you say health matters but consistently neglect sleep, exercise or nutrition, you’re out of alignment.</li>
+            <li>If you say personal growth is your focus but rarely read, learn or challenge yourself, then growth is just an idea, not a priority.</li>
+          </ul>
+
+          <p>Every “yes” you say is also a “no” to something else. When you say yes to staying late at work, you may be saying no to dinner with your children.</p>
+
+          <p>When you say yes to scrolling on social media, you might be saying no to reading that book that could change your mindset.</p>
+
+          <p>The question is not whether you are saying no, it’s whether you’re saying no to the right things.</p>
+
+          <p>People often imagine priorities as something grand, but in reality, they are revealed in daily habits. It’s not what you dream about but what you consistently choose that defines your values.</p>
+
+          <p>Some fear that defining priorities will limit them. They think, <em>If I commit to one path, I’ll lose out on others.</em> But the opposite is true. Clarity doesn’t confine you—it liberates you.</p>
+
+          <p>When you know what matters most, decisions become easier. You stop chasing everything and start pursuing the right things. You waste less time, energy, and money because you’re focused. Clarity brings peace.</p>
+
+          <p><strong>For instance:</strong></p>
+
+          <ul>
+            <li>If faith is your priority, you will carve out time for prayer, reflection and spiritual growth.</li>
+            <li>If family is your priority, you’ll intentionally schedule time to be present with them.</li>
+            <li>If growth is your priority, you’ll choose learning, mentorship and skill-building over fleeting distractions.</li>
+          </ul>
+
+          <p>Without clarity, everything feels urgent. With clarity, only the essential things feel urgent. That shift changes everything.</p>
+
+          <h3>CLARITY BEGINS WITH SELF-REFLECTION.</h3>
+
+          <p>Take a few minutes and write down your top five values—the nonnegotiables of your life.</p>
+
+          <p><strong>Reflection:</strong></p>
+
+          <ol>
+            <li>________________________</li>
+            <li>________________________</li>
+            <li>________________________</li>
+            <li>________________________</li>
+            <li>________________________</li>
+          </ol>
+
+          <p>Once you have them, ask yourself:</p>
+
+          <ul>
+            <li>Does my daily life reflect these values?</li>
+            <li>If not, what changes can I make?</li>
+          </ul>
+
+          <p>For example, if you write “family” as a top value, but your calendar shows no family time, you need to realign.</p>
+
+          <p>If you value “health” but live on junk food and stress, a shift is required. The goal is not perfection but progress—bringing your life closer and closer to the vision your values create.</p>
+
+          <h3>Story: Sarah’s Wake-Up Call</h3>
+
+          <p>Sarah was a high achiever, climbing the corporate ladder with speed and determination. Her colleagues admired her drive, her boss praised her dedication, and her bank account was growing. On the outside, she looked like the picture of success.</p>
+
+          <p>But at home, the story was different. Her young daughter often asked, “Mommy, why are you never home?” That innocent question pierced Sarah’s heart in a way no performance review or paycheck ever could.</p>
+
+          <p>In that moment, she realised that while she was winning in the office, she was losing in the place that mattered most—her family.</p>
+
+          <p>This was her wake-up call. Sarah realised she had to decide what was truly important. Success without fulfilment was empty.</p>
+
+          <p>So, she made a bold choice: she left her high-pressure job and started a business that allowed her flexibility. She earned less money at first, but she gained something far more valuable—time with her daughter, peace of mind, and alignment between her values and her actions.</p>
+
+          <p>Today, Sarah doesn’t measure her worth by her job title or her salary but by the quality of her relationships and the joy of living in harmony with her values.</p>
+
+          <p>Her turning point wasn’t about opportunity, it was about clarity.</p>
+
+          <h3>Why You Must Decide</h3>
+
+          <p>If you don’t decide what’s important, the world will decide for you. Your boss will fill your calendar. Advertisers will shape your desires. Social media will steal your time.</p>
+
+          <p>And slowly, you’ll drift into a life that doesn’t reflect who you are.</p>
+
+          <p>But when you choose your values, you take back control. You stop living reactively and start living intentionally.</p>
+
+          <p>You build a foundation that anchors you in storms and a compass that directs you in confusion.</p>
+
+          <p><strong>Clarity is power. And that power lies in your hands.</strong></p>
+
+          <h3>Taking Action</h3>
+
+          <ol>
+            <li><strong>Define your values.</strong> Write them down. Make them visible. Keep them in front of you.</li>
+            <li><strong>Audit your time.</strong> For one week, track how you spend your hours. Does it reflect your values? If not, adjust.</li>
+            <li><strong>Say no more often.</strong> Every no to the unimportant is a yes to the important.</li>
+            <li><strong>Create rituals.</strong> Build daily or weekly habits that honour your values—family dinners, journaling, workouts, or prayer.</li>
+            <li><strong>Review regularly.</strong> Life changes, and so do priorities. Revisit your values every few months to ensure you’re still aligned.</li>
+          </ol>
+
+          <p>Designing a meaningful life begins with a decision. Not a complicated one, but a courageous one: to decide what is important.</p>
+
+          <p>When you choose your values, you choose your direction. When you live by them, you create alignment, peace, and purpose.</p>
+
+          <p>You stop scattering your energy and start building a life that reflects who you are and what you stand for.</p>
+
+          <p>Sarah’s story shows us that success without alignment is hollow. But when clarity shapes your choices, your life becomes not only successful but significant.</p>
+
+          <p>So ask yourself today: What really matters to me? Write it down. Align your days with it. Protect it fiercely.</p>
+
+          <p>Because at the end of life, no one regrets not working harder or earning more. What people regret is failing to live in alignment with their deepest values.</p>
+
+          <p><strong>Clarity is power. Decide what matters and let it shape the life you build.</strong></p>
+        `
       }
-    ]
-  }
-];
 
 
 let selectedBook = null;
