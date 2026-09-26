@@ -860,10 +860,6 @@ const firebaseConfig = {
   appId: "1:941986850970:web:958033f6db9b4944d79723",
   measurementId: "G-L0MZ3EW486"
 };
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);  
-console.log("Firebase connected successfully!");
  
 async function testFirebaseConnection() {
   try {
