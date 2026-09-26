@@ -860,3 +860,19 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+async function testFirebaseConnection() {
+  try {
+    const snapshot = await getDocs(collection(db, "books"));
+
+    console.log("Firebase connected successfully!");
+    console.log("Books found:", snapshot.size);
+
+    snapshot.forEach((doc) => {
+      console.log(doc.id, doc.data());
+    });
+  } catch (error) {
+    console.error("Firebase connection failed:", error);
+  }
+}
+
+testFirebaseConnection();
