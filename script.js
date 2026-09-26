@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);  console.log("Firebase connected successfully!");
   const books = [
 {
-id: “beyond-fear”,
+id: "beyond-fear",
 title: “Beyond Fear: Discovering Strength and Responsibility”,
 author: “Atem Akol Agoth”,
 category: “Personal Development”,
