@@ -1,3 +1,5 @@
+console.log("ZaVi Library script is running!");
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import {
   getFirestore,
