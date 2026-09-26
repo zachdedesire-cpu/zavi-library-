@@ -1,3 +1,20 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAMiNKWxiyvJ-4rq9QK7WThpV-l4vGJlWc",
+  authDomain: "zavi-library.firebaseapp.com",
+  projectId: "zavi-library",
+  storageBucket: "zavi-library.firebasestorage.app",
+  messagingSenderId: "941986850970",
+  appId: "1:941986850970:web:958033f6db9b4944d79723",
+  measurementId: "G-L0MZ3EW486"
+};
+
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);const books = [
 {
