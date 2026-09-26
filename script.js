@@ -21,15 +21,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);  console.log("Firebase connected successfully!");
   const books = [
 {
-id: "Beyond-Fear",
-title: “Beyond Fear: Discovering Strength and Responsibility”,
-author: “Atem Akol Agoth”,
-category: “Personal Development”,
-description:
-“A journey about overcoming fear, rejection, responsibility, faith, and discovering the strength within you.”,
-cover: “BEYOND FEAR”,
-chapters: [
-{
 id: “beyond-fear”,
 title: “Beyond Fear: Discovering Strength and Responsibility”,
 author: “Atem Akol Agoth”,
