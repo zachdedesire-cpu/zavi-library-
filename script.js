@@ -18,7 +18,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);const books = [
+const db = getFirestore(app);  console.log("Firebase connected successfully!");
+  const books = [
 {
 id: “beyond-fear”,
 title: “Beyond Fear: Discovering Strength and Responsibility”,
@@ -861,7 +862,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore(app);  
+console.log("Firebase connected successfully!");
+ 
 async function testFirebaseConnection() {
   try {
     const snapshot = await getDocs(collection(db, "books"));
